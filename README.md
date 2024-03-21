@@ -1,8 +1,9 @@
-# hexo-theme-aircv
-Light version of aircv theme on Hexo with style design by [KeenThemes](https://www.keenthemes.com/) 
+# hexo-theme-jqcv
+Light version of aircv theme on Hexo with style design by [KeenThemes](https://www.keenthemes.com/) and firstly modified by [rayspock](https://github.com/rayspock/hexo-theme-aircv).
 
 ## Screenshots
 ![aircv-screenshots](images/slider.png)
+
 [[Live Preview]](https://rayspock.github.io/hexo-theme-aircv/)
 
 ## Installation
