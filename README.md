@@ -7,8 +7,8 @@ Light version of aircv theme on Hexo with style design by [KeenThemes](https://w
 
 ## Installation
 ```bash
-$ git clone https://github.com/rayspock/hexo-theme-aircv themes/aircv
-$ cp themes/aircv/_config.yml.example themes/aircv/_config.yml
+$ git clone https://github.com/Jingqing3948/hexo-theme-jqcv themes/hexo-theme-jqcv
+# $ cp themes/hexo-theme-jqcv/_config.yml.example themes/hexo-theme-jqcv/_config.yml
 ```
 
 Modify `yoursite/_config.yml`:
@@ -17,14 +17,14 @@ Modify `yoursite/_config.yml`:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: aircv
+theme: hexo-theme-jqcv
 ```
 
 ## Update
 You can update to latest master branch by the following command:
 
 ```base
-$ cd themes/aircv
+$ cd themes/hexo-theme-jqcv
 $ git pull
 ```
 
