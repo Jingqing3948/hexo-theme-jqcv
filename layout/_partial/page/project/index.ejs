@@ -1,0 +1,81 @@
+<style>
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* 创建四列 */
+        grid-template-rows: 1fr 1fr; /* 创建两行 */
+        grid-gap: 10px; /* 设置网格间隙 */
+        max-height: 280px; /* 调整为你的限定高度，确保只显示两行 */
+        justify-content: start; /* 从网格容器的起始端开始放置项目 */
+        align-items: start; /* 从网格行的起始端开始对齐项目 */
+        overflow-y: hidden; /* 如果项目超出高度，允许滚动 */
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .project-icon {
+        place-self: center; 
+        text-align: center;
+    }
+    
+    .project-icon img {
+        width: 100px; /* 设置图像的最大宽度，以保持圆形大小合适 */
+        height: 100px; /* 设置图像的最大高度 */
+        border-radius: 50%; /* 使图像呈圆形 */
+        object-fit: cover; /* 保证图片比例不变，充满整个容器 */
+        border: 2px solid #fff; /* 可选：为圆形图像添加边框 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影增加立体感 */
+        margin: 0 auto; /* 实现水平居中 */
+        transform: scale(0);
+        transition: transform 1s ease;
+    }
+
+    .project-icon img.visible {
+        transform: scale(1);
+    }
+
+    .project-icon:hover img {
+        transform: scale(1.1);
+        transition-duration: 300ms;
+    }
+    
+    .project-caption {
+        margin-top: 5px;
+        text-align: center;
+        font-size: 0.8em; /* 根据需要调整字体大小 */
+        color: #333; /* 根据需要调整字体颜色 */
+    }
+</style>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var elements = document.querySelectorAll('.project-icon img');
+        var windowHeight = window.innerHeight;
+
+        elements.forEach(function(element) {
+            var positionFromTop = element.getBoundingClientRect().top;
+
+            if (positionFromTop - windowHeight <= 0) {
+                element.classList.add('visible');
+            }
+        });
+    });
+
+</script>
+
+<div id="proj">
+    <div class="container content-lg">
+        <div class="row">
+            <div class="col-sm-3 sm-margin-b-30">
+                <div class="text-right sm-text-left">
+                    <h2 class="margin-b-0"><%= theme.proj.title %></h2>
+                    <p><%- theme.proj.subtitle %></p>
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-1">
+                <%- partial('masonry-grid') %>
+            </div>
+        </div>
+        <!--// end row -->
+    </div>
+    
+</div>

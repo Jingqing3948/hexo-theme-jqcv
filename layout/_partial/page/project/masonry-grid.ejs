@@ -1,0 +1,41 @@
+<div class="projects-container">
+  <% theme.proj.items.forEach(item => { %>
+      <div class="work work-popup-trigger">
+          <div class="project-icon" >
+              <img class="img-responsive" src="<%= item.image %>" alt="<%= item.title %>">
+              <p style="text-align: center; "><%= item.title %></p>
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close"><%= item.hide_text %></a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5"><%= item.title %></h3>
+                      <span><%- item.subtitle %></span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                          <%- item.description %>
+                          <% if(item.cta) {%>
+                              <p>
+                              <b><a href="<%= item.href %>"> <%= item.cta %> </a></b>
+                              </p>
+                          <% } %>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                      <div class="margin-b-5">
+                          <p><h5>Development Tools</h5></p>
+                      </div>
+                          <div class="margin-t-10 sm-margin-t-0">
+                          <% item.tools.forEach( tool => { %>
+                              <p class="margin-b-5"><%- tool.text %></p>
+                          <% }) %>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  <% }); %>
+</div>
