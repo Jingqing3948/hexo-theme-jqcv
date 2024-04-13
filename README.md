@@ -4,7 +4,7 @@ Light version of aircv theme on Hexo with style design by [KeenThemes](https://w
 ## Screenshots
 ![aircv-screenshots](images/slider.png)
 
-[[Live Preview]](https://rayspock.github.io/hexo-theme-aircv/)
+[[Live Preview]](https://jingqing3948.github.io/TWtutoral.github.io/)
 
 ## Installation
 ```bash
